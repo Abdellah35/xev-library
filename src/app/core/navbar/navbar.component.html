@@ -1,0 +1,31 @@
+<mat-toolbar class="orange-background">
+  <mat-icon class="custom-icon">book</mat-icon>
+  <span class="custom-icon">Xev Mini Library</span>
+  <span class="example-spacer"></span>
+
+  <!-- User Authentication Section -->
+  <ng-container *ngIf="currentUser; else loginSection">
+    <div class="button-default">
+      <span class="default-label-color button-label">{{ currentUser.displayName }}</span>
+    </div>
+    <div class="button-default">
+      <button mat-stroked-button aria-label="Logout button" (click)="logoutEM.emit()">
+        <span class="button-label button-logout">Logout</span>
+      </button>
+    </div>
+  </ng-container>
+
+  <!-- Login/Signup Section -->
+  <ng-template #loginSection>
+    <div class="button-default">
+      <button mat-stroked-button [routerLink]="'/login'" aria-label="Login button">
+        <span class="default-label-color button-label">Log In</span>
+      </button>
+    </div>
+    <div class="button-default">
+      <button mat-stroked-button [routerLink]="'/register'" aria-label="Sign up button">
+        <span class="default-label-color button-label">Sign Up</span>
+      </button>
+    </div>
+  </ng-template>
+</mat-toolbar>

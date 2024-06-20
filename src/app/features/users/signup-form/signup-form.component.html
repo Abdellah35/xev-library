@@ -1,0 +1,38 @@
+<mat-card fxLayoutAlign="center center">
+    <mat-card-title>Register</mat-card-title>
+<mat-card-content>
+<div className="flex justify-center flex-col items-center">
+    <p className="text-red-500"> My hole life</p>
+</div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  <p>
+    <mat-form-field>
+      <input type="text" matInput placeholder="email" formControlName="email">
+    </mat-form-field>
+  </p>
+  <!-- <div *ngIf="form.get('password').hasError('required')">
+    Password is required.
+  </div> -->
+  <p>
+    <mat-form-field>
+      <input type="password" matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input type="name" matInput placeholder="Name" formControlName="displayName">
+    </mat-form-field>
+  </p>
+
+  <p *ngIf="error" class="error">
+    {{ error }}
+  </p>
+
+  <div class="button">
+    <button type="submit" mat-button>Register</button>
+  </div>
+
+</form>
+</mat-card-content>
+</mat-card>
