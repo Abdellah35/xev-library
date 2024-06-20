@@ -4,6 +4,7 @@ import { AuthService } from '../../../core/services/auth.service';
 import { Firestore } from '@angular/fire/firestore';
 import { User } from '../../../core/models/user';
 import { Router } from '@angular/router';
+import { BookService } from '../../../core/services/book.service';
 
 
 @Component({
@@ -15,10 +16,12 @@ export class LoginComponent {
   authService: AuthService = inject(AuthService);
   firestore: Firestore = inject(Firestore);
   router: Router = inject(Router);
+  bookService: BookService = inject(BookService);
   
   errorMessage: string | null = null;
 
   login(user: User){
+    this.bookService.getAllBooks();
     this.errorMessage = null;
 
     this.authService.login(user.email, user.password).subscribe({ next: () => {
