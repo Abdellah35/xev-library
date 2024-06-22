@@ -3,7 +3,9 @@
         <button mat-raised-button (click)="addBook()" type="button" class=" text-white bg-orange-600  text-2xl font-semibold">Add Book</button>
     </div>
     
-    <div class="grid grid-col-1 md:grid-cols-4 justify-between pl-5">
+    <div class="grid grid-col-2 md:grid-cols-4 justify-between pl-5">
         <xev-book-detail-card *ngFor="let book of books" [bookDetail]="book" (deleteEM)="deleteBook(book.id)" (updateEM)="updateBook(book)"></xev-book-detail-card>
+
+        <p *ngIf="books.length == 0" class="text-black text-4xl">No books found</p>
     </div>
 </div>

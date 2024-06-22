@@ -22,9 +22,9 @@ export class RegisterComponent {
       this.router.navigate(['/books']);
     }, error: (err) => {
       if (err.code === 'auth/email-already-in-use') {
-        this.errorMessage = 'This email address is already registered. Please sign in or use a different email.';
+        this.errorMessage = 'email is already registered.';
       } else {
-        this.errorMessage = 'An error occurred during registration. Please try again later.';
+        this.errorMessage = 'An error occurred during registration.';
       }
     }} )
   }

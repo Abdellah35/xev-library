@@ -1,1 +1,10 @@
-{}
+{
+  "hosting": {
+    "public": "dist/xev-library/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
