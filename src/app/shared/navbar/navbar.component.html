@@ -1,6 +1,7 @@
-<mat-toolbar class="orange-background shadow-lg shadow-slate-300 fixed inset-0 z-50">
-  <mat-icon class="text-white mr-3 text-4xl">book</mat-icon>
-  <div class="flex flex-col">
+<mat-toolbar
+  class="orange-background shadow-lg shadow-slate-300 fixed inset-0 z-50"
+>
+  <div class="flex flex-col cursor-pointer" [routerLink]="'/books'">
     <span class="text-white text-4xl font-semibold">Xev</span>
     <span class="text-sm pl-4 text-black">mini library</span>
   </div>
@@ -10,8 +11,12 @@
   <ng-container *ngIf="currentUser; else loginSection">
     <mat-menu #appMenu="matMenu">
       <ng-template matMenuContent>
-        <button mat-menu-item (click)="logoutEM.emit()" aria-label="Logout button">
-          <span class="text-orange-500 text-lg ">Logout</span>
+        <button
+          mat-menu-item
+          (click)="logoutEM.emit()"
+          aria-label="Logout button"
+        >
+          <span class="text-orange-500 text-lg">Logout</span>
         </button>
       </ng-template>
     </mat-menu>
@@ -26,13 +31,21 @@
   <!-- Login/Signup Section -->
   <ng-template #loginSection>
     <div class="p-5">
-      <button mat-stroked-button [routerLink]="'/login'" aria-label="Login button">
-        <span class="text-white text-lg font-semibold">Log In</span>
+      <button
+        mat-stroked-button
+        [routerLink]="'/login'"
+        aria-label="Login button"
+      >
+        <span class="text-white text-lg font-semibold hover:text-orange-900">Log In</span>
       </button>
     </div>
     <div class="p-5">
-      <button mat-stroked-button [routerLink]="'/register'" aria-label="Sign up button">
-        <span class="text-white text-lg font-semibold">Sign Up</span>
+      <button
+        mat-stroked-button
+        [routerLink]="'/register'"
+        aria-label="Sign up button"
+      >
+        <span class="text-white text-lg font-semibold hover:text-orange-900">Sign Up</span>
       </button>
     </div>
   </ng-template>
