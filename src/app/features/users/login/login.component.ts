@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { AuthService } from '../../../core/services/auth.service';
 import { Firestore } from '@angular/fire/firestore';
 import { User } from '../../../core/models/user';

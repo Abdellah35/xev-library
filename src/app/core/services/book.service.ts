@@ -14,7 +14,6 @@ export class BookService {
   getAllBooksByUser(createdBy: string): Observable<Book[]> {
     const dbCollection = collection(this.db, '/books');
     const queried = query(dbCollection, where('createdBy', '==', createdBy));
-
     return collectionData(queried, { idField: 'id' });
   }
 
@@ -31,7 +30,6 @@ export class BookService {
   }
   updateBook(bookId: string, data: Partial<Book>): Observable<any> {
     const docRef = doc(this.db, '/books', bookId);
-    
     return from(updateDoc(docRef, data));
   }  
 }

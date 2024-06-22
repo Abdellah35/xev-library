@@ -1,6 +1,5 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile, user } from '@angular/fire/auth';
-import { Router } from '@angular/router';
 import { Observable, from } from 'rxjs';
 import { User } from '../models/user';
 
@@ -17,7 +16,6 @@ export class AuthService {
 
   login(email: string, password: string ): Observable<void>{
     const promis = signInWithEmailAndPassword(this.fireAuth, email, password).then(() => {});
-    
     return from(promis);
   }
 
@@ -25,12 +23,10 @@ export class AuthService {
     const promis = createUserWithEmailAndPassword(this.fireAuth, email, password).then(
       response => updateProfile(response.user, { displayName: displayName}),
     );
-
     return from(promis);
   }
   logout(): Observable<void>{
     const promise = signOut(this.fireAuth);
-
     return from(promise);
   }
 }

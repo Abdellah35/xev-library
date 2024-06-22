@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../../core/models/user';
 import { AuthService } from '../../../core/services/auth.service';
-import { Firestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 
 @Component({

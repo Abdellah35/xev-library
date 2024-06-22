@@ -20,8 +20,6 @@ export class SignupFormComponent {
   
   submit() {
     if (this.form.valid) {
-      console.log(this.form.value);
-      
       this.submitEM.emit(this.form.value);
     }else{
       this.error = 'Please fill in all required fields.';

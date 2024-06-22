@@ -4,15 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { BooksModule } from './features/books/books.module';
+import { UsersModule } from './features/users/users.module';
+import { CoreModule } from './core/core.module';
+import { AuthGuardService } from './core/services/auth-guard.service';
+
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 
-import { AuthGuardService } from './core/services/auth-guard.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { BooksModule } from './features/books/books.module';
-import { UsersModule } from './features/users/users.module';
-import { CoreModule } from './core/core.module';
+
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
