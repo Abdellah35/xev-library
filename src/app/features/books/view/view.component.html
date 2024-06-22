@@ -1,0 +1,9 @@
+<div class="min-h-screen mt-0">
+    <div class=" flex flex-col items-end md:pr-20 md:m-10">
+        <button mat-raised-button (click)="addBook()" type="button" class=" text-white bg-orange-600  text-2xl font-semibold">Add Book</button>
+    </div>
+    
+    <div class="grid grid-col-1 md:grid-cols-4 justify-between pl-5">
+        <xev-book-detail-card *ngFor="let book of books" [bookDetail]="book" (deleteEM)="deleteBook(book.id)" (updateEM)="updateBook(book)"></xev-book-detail-card>
+    </div>
+</div>

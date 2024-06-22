@@ -5,8 +5,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-image: url('../src/assets/images/library-image.jpg');
+    /* background-image: url('../src/assets/images/library-image.jpg');
     background-size: cover;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px); */
+    background-color: whitesmoke;
  }
 

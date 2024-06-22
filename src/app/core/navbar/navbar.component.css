@@ -1,30 +1,8 @@
 /* component.css */
 .orange-background {
-  background-color: #ffffff; /* Adjust color as needed */
-}
-
-.custom-icon {
-  color: #ff7300;
+  background-color: #d26f1e; /* Adjust color as needed */
 }
 
 .example-spacer {
   flex: 1 1 auto;
-}
-
-.default-label-color {
-  color: #ff7300;
-}
-
-.button-default {
-  margin: 5px;
-  padding: 5px;
-}
-
-.button-label {
-  font-size: large;
-  font-weight: 700;
-}
-
-.button-logout {
-  color: hsl(354, 100%, 50%);
 }

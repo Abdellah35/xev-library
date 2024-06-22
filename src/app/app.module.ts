@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+
 import { AuthGuardService } from './core/services/auth-guard.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BooksModule } from './features/books/books.module';
@@ -27,7 +29,8 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     UsersModule,
     CoreModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
     ],
   providers: [
     provideAnimationsAsync(),

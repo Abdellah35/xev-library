@@ -24,7 +24,7 @@ export class SignupFormComponent {
       
       this.submitEM.emit(this.form.value);
     }else{
-      alert('invalid')
+      this.error = 'Please fill in all required fields.';
     }
   }
 }

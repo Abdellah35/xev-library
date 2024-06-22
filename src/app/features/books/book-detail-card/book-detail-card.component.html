@@ -1,0 +1,26 @@
+<div class=" m-5 items-center justify-normal w-4/5">
+    <mat-card class="xev-card" appearance="outlined">
+        <mat-card-header class="w-full text-center">
+          <mat-card-title class=" text-orange-600 p-5 w-full"><span class="text-center font-semibold text-xl">{{bookDetail.title}}</span></mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="justify-between flex flex-row">
+            <p>Author: <span>{{bookDetail.author}}</span></p>
+            <p>Read Date: <span>{{bookDetail.date}}</span></p>
+        </mat-card-content>
+        <mat-card-footer class="card-footer">
+            <mat-chip-set aria-label="Chihuahua traits" class="flex flex-row">
+                <mat-chip *ngFor="let tag of bookDetail.tags" class=" text-green-400">{{tag}}</mat-chip>
+            </mat-chip-set>
+            <div class="w-full flex flex-col items-end">
+                <div class="flex flex-row space-x-4">
+                    <button mat-mini-fab aria-label="delete button" (click)="deleteEM.emit()">
+                        <mat-icon class="bg-none">delete</mat-icon>
+                    </button>
+                    <button mat-mini-fab aria-label="edit button" class="w-10" (click)="updateEM.emit()">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-card-footer>
+      </mat-card>
+</div>
