@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { User } from '../models/user';
+import { User } from '../../core/models/user';
 
 @Component({
   selector: 'xev-navbar',
