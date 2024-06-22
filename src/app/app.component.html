@@ -1,6 +1,11 @@
-<section>
-  <xev-navbar [currentUser]="authService.loggedInUser()" (logoutEM)="logout()"></xev-navbar>
+<section class="flex flex-col justify-between h-full m-0 p-0">
+  <div>
+    <xev-navbar [currentUser]="authService.loggedInUser()" (logoutEM)="logout()"></xev-navbar>
+  </div>
+  <main class="main">
+    <router-outlet />
+  </main>
+  <footer>
+    <xev-footer></xev-footer>
+  </footer>
 </section>
-<main class="main mt-28">
-  <router-outlet />
-</main>
